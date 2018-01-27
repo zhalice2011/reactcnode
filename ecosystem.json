@@ -1,7 +1,7 @@
 {
     "apps":[
         {
-            "name":"appclone",
+            "name":"reactcnode",
             "script":"./server/server.js",
             "env":{
                 "COMMON_VARIABLE":"true"
@@ -18,7 +18,7 @@
             "port":"22",
             "ref":"origin/master", //仓库分支
             "repo": "https://github.com/zhalice2011/reactcnode.git",  //仓库地址
-            "path": "/www/appclone/production", //表示部署到服务器的哪一个路径下面
+            "path": "/www/reactcnode/production", //表示部署到服务器的哪一个路径下面
             "ssh_options":"StrictHostKeyChecking=no", //取消key校验
             "post-deploy":"npm install --registry=https://registry.npm.taobao.org && pm2 startOrRestart ecosystem.json  --env  production", //让服务器npm install
             "env":{
