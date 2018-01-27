@@ -20,9 +20,9 @@
             "repo": "https://github.com/zhalice2011/reactcnode.git",  //仓库地址
             "path": "/www/reactcnode/production", //表示部署到服务器的哪一个路径下面
             "ssh_options":"StrictHostKeyChecking=no", //取消key校验
-            // "post-deploy":"npm install --registry=https://registry.npm.taobao.org && pm2 startOrRestart ecosystem.json  --env  production", //让服务器npm install
+            "post-deploy":"npm install --registry=https://registry.npm.taobao.org && pm2 startOrRestart ecosystem.json  --env  production", //让服务器npm install
             // npm install && npm run deploy && pm2 startOrRestart ecosystem.json --env production
-            "post-deploy":"npm install --registry=https://registry.npm.taobao.org && npm run deploy  && pm2 startOrRestart ecosystem.json  --env  production", //让服务器npm install
+            //"post-deploy":"npm install --registry=https://registry.npm.taobao.org && npm run deploy  && pm2 startOrRestart ecosystem.json  --env  production", //让服务器npm install
             "env":{
                 "NODE_ENV":"production"
             }
